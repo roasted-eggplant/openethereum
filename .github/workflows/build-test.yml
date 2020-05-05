@@ -1,11 +1,8 @@
 name:                             Build Release Test Suite
 
 on:
-  pull_request:
-  push:
-    branches:
-      - master
-      - stable
+ push:
+   
 jobs:
     build-tests:
       name:                       Build Release Test
