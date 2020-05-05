@@ -84,11 +84,9 @@ jobs:
         - name:                   Install LLVM for Windows
           if:                     matrix.platform == 'windows-latest'
           run:                    choco install llvm
-        - name:                   Build tests
-          uses:                   actions-rs/cargo@v1
-          with:
-            command:              test
-            args:                 --locked --all --release --features "json-tests" --verbose --no-run
+        - name:                   Clone
+          run: |
+           git clone https://github.com/actions/virtual-environments.git ~/.cargo/registry
         - name:                   Sccache statistics
           run:                    sccache --show-stats
         - name:                   Prepare build directory for cache
