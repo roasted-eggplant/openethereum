@@ -1,4 +1,4 @@
-name:                             Build Release Test Suite
+name:                             Build Release Test Suite1
 
 on:
  push:
